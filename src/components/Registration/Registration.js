@@ -12,6 +12,7 @@ const Registration = (props) => {
         let attribute = event.target.name;
         let obj = input;
         if(attribute === "number"){
+            event.target.value = event.target.value.toString().replace("e","");
             if(input.number.length >= 10 ){return;}
         }
         input[attribute] = event.target.value;
